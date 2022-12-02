@@ -1,0 +1,14 @@
+npm install -g @prisma/language-server vscode-langservers-extracted stylelint-lsp
+https://quick-lint-js.com/
+
+--Enable (broadcasting) snippet capability for completion
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+require'lspconfig'.html.setup {
+  capabilities = capabilities,
+}
+require'lspconfig'.html.setup{}
+require'lspconfig'.stylelint_lsp.setup{}
+require'lspconfig'.quick_lint_js.setup{}
+require'lspconfig'.prismals.setup{}
