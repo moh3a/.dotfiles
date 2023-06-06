@@ -1,24 +1,37 @@
-# .files
+# dotfiles
 
-- config for neovim
-- prompt style with starship
+## setup neovim
 
-### neovim config
+todo
 
-- much of the workflow was based on ThePrimeagen workflow and on this article [https://dev.to/craftzdog/my-neovim-setup-for-react-typescript-tailwind-css-etc-58fb] ;
-- must start by installing Neovim packer, by running:
-` 
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-` ;
-- then run this nvim command: `:PackerSync` ;
-- make sure to install these two npm packs: `npm i -g typescript-language-server @fsouza/prettierd` ;
+## setup prompt shell
 
-### starship: cross-shell prompt
+- both starship and oh-my-posh are configured, add either to `.bashrc`:
 
-- follow instructions from [https://starship.rs/config/] ;
-- check out [https://ohmyposh.dev/docs/] if better ;
+```bash
+# run starship prompt shell
+eval "$(starship init bash)"
 
-### todo
+# or
 
-- usefull to add fish -> [https://www.hanselman.com/blog/installing-fish-shell-on-ubuntu-on-windows-10] ;
+# run oh my posh prompt shell
+eval "$(oh-my-posh init bash --config '~/.config/oh-my-posh.omp.json')"
+# replace `~` with .config file path
+```
+
+- for cmd, add `./oh-my-posh.lua` to the clink scripts directory
+- for powershell, add the following line to your `$PROFILE` (`Microsoft.PowerShell_profile.ps1`):
+
+```powershell
+# STARSHIP CONFIG
+# $ENV:STARSHIP_CONFIG = "$HOME\.config\starship.toml"
+# # $ENV:STARSHIP_DISTRO = "➜ xcad"
+# Invoke-Expression (&starship init powershell)
+
+# or
+
+# OH MY POSH CONFIG
+oh-my-posh init pwsh --config "$HOME\.config\oh-my-posh.omp.json" | Invoke-Expression
+# & ([ScriptBlock]::Create((oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json" --print) -join "`n"))
+
+```

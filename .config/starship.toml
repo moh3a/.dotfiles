@@ -61,9 +61,6 @@ format = "on [$symbol($subscription)]($style) "
 symbol = "⏺️ "
 style = "blue bold"
 
-[bun]
-format = "via [🍔 $version](bold green) "
-
 [c]
 format = "via [$name $version]($style)"
 
@@ -188,12 +185,6 @@ format = "$symbol[${ram}( | ${swap})]($style) "
 threshold = 70
 style = "bold dimmed white"
 disabled = false
-
-[meson]
-disabled = false
-truncation_symbol = "--"
-symbol = " "
-style = "bold dimmed green"
 
 [hg_branch]
 format = "on [🌱 $branch](bold purple)"
