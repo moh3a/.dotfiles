@@ -6,7 +6,9 @@ todo
 
 ## setup prompt shell
 
-- both starship and oh-my-posh are configured, add either to `.bashrc`:
+A config file to both [starship](https://starship.rs/installing) and [oh-my-posh](https://ohmyposh.dev/docs/) is made. Add it to:
+
+- for bash, add the following to `.bashrc`
 
 ```bash
 # run starship prompt shell
@@ -19,7 +21,7 @@ eval "$(oh-my-posh init bash --config '~/.config/oh-my-posh.omp.json')"
 # replace `~` with .config file path
 ```
 
-- for cmd, add `./oh-my-posh.lua` to the clink scripts directory
+- for cmd, add `./oh-my-posh.lua` or `./starship.lua` to the [clink](https://chrisant996.github.io/clink/clink.html) scripts directory
 - for powershell, add the following line to your `$PROFILE` (`Microsoft.PowerShell_profile.ps1`):
 
 ```powershell
@@ -32,6 +34,4 @@ eval "$(oh-my-posh init bash --config '~/.config/oh-my-posh.omp.json')"
 
 # OH MY POSH CONFIG
 oh-my-posh init pwsh --config "$HOME\.config\oh-my-posh.omp.json" | Invoke-Expression
-# & ([ScriptBlock]::Create((oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json" --print) -join "`n"))
-
 ```
