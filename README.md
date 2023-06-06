@@ -2,7 +2,7 @@
 
 ## setup neovim
 
-todo
+Source the configuration and run `:PackerSyn`
 
 ## setup prompt shell
 
