@@ -15,4 +15,37 @@ return require('packer').startup(function(use)
 	-- colorscheme
 	use({ 'rose-pine/neovim', as = 'rose-pine' })
 
+	-- treesitter
+	use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+	
+	-- harpoon
+	use('theprimeagen/harpoon')
+
+	-- undotree
+	use('mbbill/undotree')
+
+	use('tpope/vim-fugitive')
+
+	-- lsp
+	use {
+		'VonHeikemen/lsp-zero.nvim',
+		requires = {
+			-- lsp support
+			{ 'neovim/nvim-lspconfig' },
+			{ 'williamboman/mason.nvim' },
+			{ 'williamboman/mason-lspconfig.nvim' },
+
+			-- autocompletion
+			{ 'hrsh7th/nvim-cmp' },
+			{ 'hrsh7th/cmp-nvim-lsp' },
+			{ 'hrsh7th/cmp-buffer' },
+			{ 'hrsh7th/cmp-path' },
+			{ 'hrsh7th/cmp-nvim-lua' },
+			{ 'L3MON4D3/LuaSnip' },
+
+			-- snippets
+			{ 'L3MON4D3/LuaSnip' },
+			{ 'rafamadriz/friendly-snippets' },
+		}
+	}
 end)

@@ -1,3 +1,3 @@
 require("moh3a")
-print("hello")
+print("welcome moh3a")
 
