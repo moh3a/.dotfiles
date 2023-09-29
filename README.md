@@ -1,9 +1,5 @@
 # dotfiles
 
-## setup neovim
-
-Source the configuration and run `:PackerSyn`
-
 ## setup prompt shell
 
 A config file to both [starship](https://starship.rs/installing) and [oh-my-posh](https://ohmyposh.dev/docs/) is made. Add it to:
@@ -20,6 +16,8 @@ eval "$(starship init bash)"
 eval "$(oh-my-posh init bash --config '~/.config/oh-my-posh.omp.json')"
 # replace `~` with .config file path
 ```
+
+## yes, for windows
 
 - for cmd, add `./oh-my-posh.lua` or `./starship.lua` to the [clink](https://chrisant996.github.io/clink/clink.html) scripts directory
 - for powershell, add the following line to your `$PROFILE` (`Microsoft.PowerShell_profile.ps1`):
