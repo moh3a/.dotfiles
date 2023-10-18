@@ -76,6 +76,8 @@ end
 
 lspconfig.tsserver.setup {
   on_attach = M.on_attach,
+  root_dir = lspconfig.util.root_pattern("package.json"),
+  single_file_support = false,
   capabilities = M.capabilities,
   commands = {
     OrganizeImports = {
@@ -83,6 +85,11 @@ lspconfig.tsserver.setup {
       description = "Organize Imports",
     }
   }
+}
+
+lspconfig.denols.setup {
+  on_attach = M.on_attach,
+  root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc")
 }
 
 return M

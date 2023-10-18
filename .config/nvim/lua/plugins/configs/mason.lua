@@ -1,5 +1,5 @@
 local options = {
-  ensure_installed = { "lua-language-server", "typescript-language-server", "eslint-lsp", "prettier", "js-debug-adapter" },
+  ensure_installed = { "lua-language-server", "typescript-language-server", "deno", "eslint-lsp", "prettier", "js-debug-adapter" },
 
   PATH = "skip",
 

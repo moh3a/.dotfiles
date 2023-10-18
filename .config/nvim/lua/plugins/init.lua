@@ -263,7 +263,7 @@ local default_plugins = {
     end,
   },
 
-  "xiyaowong/transparent.nvim",
+  -- "xiyaowong/transparent.nvim",
 }
 
 local config = require("core.utils").load_config()
